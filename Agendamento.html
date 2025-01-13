@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBS Conecta - Agendamento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Agendamento.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/imgs/logo.svg" alt="UBS Conecta">
+        </div>
+        <nav>
+            <a href="#">Agendar Consulta</a>
+            <a href="#">Meus Agendamentos</a>
+            <a href="#">Meus Dados</a>
+            <a href="#">Sair</a>
+        </nav>
+    </header>
+    
+    <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/imgs/vacinacao.jpg" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/imgs/vacinacao.jpg" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/imgs/vacinacao.jpg" alt="Slide 3">
+          </div>
+        </div>
+        <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+
+      <script src="js/carrossel.js"></script>
+
+        <div class="buttons">
+            <button>Agendar Consulta</button>
+            <button>Ver Meus Agendamentos</button>
+        </div>
+
+        <div class="filtros">
+            <select>
+                <option>Selecione uma Especialidade</option>
+            </select>
+            <select>
+                <option>Selecione um Local</option>
+            </select>
+        </div>
+
+        <ul class="agendamentos">
+            <li class="agendamento">
+                <div class="agendamento-info">
+                    <p><strong>20/11/2024 - <span>10:30</span></strong></p>
+                    <p>Local: UBS Planície das Mangueiras</p>
+                    <p>Especialidade: Clínico Geral</p>
+                </div>
+                <button>Agendar</button>
+            </li>
+            <li class="agendamento">
+                <div class="agendamento-info">
+                    <p><strong>25/11/2024 - <span>14:00</span></strong></p>
+                    <p>Local: UBS Nova Natal</p>
+                    <p>Especialidade: Dentista</p>
+                </div>
+                <button>Agendar</button>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        UBS Conecta © 2024
+    </footer>
+</body>
+</html>
