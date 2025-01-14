@@ -28,125 +28,9 @@ header nav {
   gap: 10px;
 }
 
-.btn {
-  padding: 10px 20px;
-  color: white;
-  background-color: #0056b3;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: 0.3s;
-}
-
-.btn.secondary {
-  background-color: #fff;
-  color: #0056b3;
-  border: 1px solid #0056b3;
-}
-
-.btn:hover {
-  background-color: #003f7f;
-}
-
-.btn.secondary:hover {
-  background-color: #e6e6e6;
-}
-
-/* Hero Section */
-.hero {
+main {
   flex: 1;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 20px;
-  background-color: #fff;
-  flex-wrap: wrap;
-}
-
-.hero-text {
-  flex: 1;
-  max-width: 48%;
-  margin-right: 20px;
-}
-
-.hero-text h1 {
-  color: #007bff;
-  font-size: 5rem;
-  margin-bottom: 15px;
-}
-
-.hero-text p {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-/* Slider */
-.slider {
-  flex: 1;
-  max-width: 48%;
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.slides img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.slider .prev,
-.slider .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  line-height: 40px;
-  text-align: center;
-}
-
-.slider .prev {
-  left: 10px;
-}
-
-.slider .next {
-  right: 10px;
-}
-
-/* Estilo para as bolinhas (indicadores) */
-.indicators {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.indicators .dot {
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.indicators .dot.active {
-  background-color: #0078d4; /* Cor ativa */
 }
 
 /* Footer */
@@ -157,27 +41,6 @@ footer {
   color: white;
 }
 
-/* Media Queries para Responsividade */
-@media (max-width: 768px) {
-  .btn {
-    padding: 5px 10px;
-  }
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-text,
-  .slider {
-    max-width: 100%;
-    margin: 0 0 20px 0;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-  .hero-text p {
-    font-size: 1rem;
-  }
+footer p {
+  margin: 1rem 0;
 }
