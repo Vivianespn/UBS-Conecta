@@ -1,0 +1,264 @@
+main {
+  padding: 2rem;
+  background: #fff;
+}
+
+h1 {
+  text-align: center;
+  color: #0078d4;
+  font-size: 40px;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.wizard {
+  margin-top: 20px;
+}
+.wizard-progress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.wizard-progress .step {
+  text-align: center;
+  flex: 1;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.wizard-progress .step.active {
+  color: #007bff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+input,
+select {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button + button {
+  margin-left: 1rem;
+}
+
+.wizard-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wizard-step {
+  display: none;
+}
+
+.wizard-step.active {
+  display: block;
+}
+
+.wizard-header {
+  display: grid;
+}
+.wizard-main {
+  display: block;
+  margin: 1rem 0;
+  /*padding: 0 2rem;
+   max-height: 350px;
+  overflow-y: auto;
+  height: clamp(130px, 45vh, 600px); */
+}
+.wizard-form {
+  display: none;
+}
+.wizard-form.active {
+  display: block;
+}
+.wizard-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wizard h4 {
+  color: #4777ae;
+}
+.wizard label {
+  color: #4777ae;
+  white-space: nowrap;
+  margin: 10px 10px 0 0;
+}
+.wizard label.required::after {
+  color: #a88721;
+  content: '*';
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: normal;
+  position: absolute;
+}
+.wizard input,
+.wizard select,
+.wizard textarea {
+  margin: 0;
+  border-color: #4777ae;
+  outline: none;
+  color: #5d5d5d;
+}
+
+.wizard input:focus,
+.wizard select:focus,
+.wizard textarea:focus {
+  border-width: 2px;
+}
+
+.steps {
+  overflow: hidden;
+  position: relative;
+  display: inline-flex;
+}
+.progress {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+}
+.step {
+  position: relative;
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.step-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-top: 4px;
+  background: #82b2ea;
+  font-size: 25px;
+  color: #fff;
+  line-height: 40px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.step.active .step-icon {
+  background: #4777ae;
+}
+
+.step.activated .step-icon {
+  background: #fff;
+  border: 1px solid #4777ae;
+  color: #4777ae;
+  line-height: 38px;
+}
+.step.activated p,
+.step.active p {
+  color: #4777ae;
+}
+.step p {
+  color: #82b2ea;
+  transition: color 0.3s ease;
+  font-size: 18px;
+}
+p {
+  margin: 0 0 10px;
+}
+.form-group {
+  display: flex;
+  margin-top: 0.5rem;
+}
+.form-group-textarea {
+  display: flex;
+  flex-direction: column;
+}
+.advice {
+  color: var(--warning-dark-color);
+}
+
+.advice {
+  color: #a88721;
+}
+input[type='checkbox'] {
+  width: 25px;
+}
+.form-group input[type='checkbox'] {
+  margin: 14px 0;
+}
+
+.wizard input.is-invalid,
+.wizard select.is-invalid,
+.wizard textarea.is-invalid {
+  border-color: rgb(202, 32, 32);
+}
+
+.message-container {
+  color: #007bff;
+  font-size: 5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  /* max-width: 560px; */
+}
+.message-container h1 {
+  max-width: 560px;
+}
+@media (max-width: 768px) {
+  .step p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 425px) {
+  main {
+    padding: 1rem;
+  }
+  .steps {
+    gap: 0;
+  }
+  .step-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}
