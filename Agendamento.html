@@ -26,8 +26,8 @@
         <img src="images/logo.png" alt="UBS Conecta" />
       </div>
       <nav>
-        <a href="Agendamento.html">Agendar Consulta</a>
-        <a href="#">Meus Agendamentos</a>
+        <a href="Agendamento.html" disabled>Agendar Consulta</a>
+        <a href="meusAgedamentos.html">Meus Agendamentos</a>
         <a href="#">Meus Dados</a>
         <a href="index.html">Sair</a>
       </nav>
@@ -50,8 +50,19 @@
       </section>
 
       <section class="buttons text-center my-2">
-        <button class="btn btn-primary m-2">Agendar Consulta</button>
-        <button class="btn btn-secondary m-2">Ver Meus Agendamentos</button>
+        <button
+          class="btn btn-primary m-2"
+          onclick="window.location.href='Agendamento.html'"
+          disabled
+        >
+          Agendar Consulta
+        </button>
+        <button
+          class="btn btn-primary m-2"
+          onclick="window.location.href='meusAgedamentos.html'"
+        >
+          Ver Meus Agendamentos
+        </button>
       </section>
 
       <section class="filtro my-2 mx-3">
@@ -59,9 +70,16 @@
         <div class="filtros mt-3 mb-0">
           <select class="form-select w-50 mx-auto">
             <option>Selecione uma Especialidade</option>
+            <option value="Clínico Geral">Clínico Geral</option>
+            <option value="Dentista">Dentista</option>
           </select>
           <select class="form-select w-50 mx-auto">
             <option>Selecione um Local</option>
+            <option value="UBS Nova Aliança">UBS Nova Aliança</option>
+            <option value="UBS Nova Natal">UBS Nova Natal</option>
+            <option value="UBS Planície das Mangueiras">
+              UBS Planície das Mangueiras
+            </option>
           </select>
         </div>
       </section>
@@ -71,20 +89,20 @@
           <li class="agendamento p-3 mb-3 border rounded">
             <div class="agendamento-info">
               <p>
-                <strong>20/11/2024 - <span>10:30</span></strong>
+                <strong>30/01/2025 - <span>10:30</span></strong>
               </p>
-              <p>Local: UBS Planície das Mangueiras</p>
-              <p>Especialidade: Clínico Geral</p>
+              <p><strong>Local:</strong> UBS Planície das Mangueiras</p>
+              <p><strong>Especialidade:</strong> Clínico Geral</p>
             </div>
             <button class="btn btn-success">Agendar</button>
           </li>
           <li class="agendamento p-3 mb-3 border rounded">
             <div class="agendamento-info">
               <p>
-                <strong>25/11/2024 - <span>14:00</span></strong>
+                <strong>04/02/2025 - <span>14:00</span></strong>
               </p>
-              <p>Local: UBS Nova Natal</p>
-              <p>Especialidade: Dentista</p>
+              <p><strong>Local:</strong> UBS Nova Natal</p>
+              <p><strong>Especialidade:</strong> Dentista</p>
             </div>
             <button class="btn btn-success">Agendar</button>
           </li>
